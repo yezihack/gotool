@@ -1,9 +1,12 @@
 package too
 
 import (
+	. "github.com/smartystreets/goconvey/convey"
 	"strings"
 	"testing"
 )
+
+
 
 //
 var text = strings.Repeat("v", 100)
@@ -21,5 +24,13 @@ func BenchmarkMd5V(b *testing.B) {
 // BenchmarkMd5V-8   	 2869645	       612 ns/op	      64 B/op	       2 allocs/op
 
 func TestMd5V(t *testing.T) {
-	
+	Convey("If Md5", t, func() {
+		So(Md5V("too"), ShouldEqual, "b403d3f0efbf4cb850d2d543758cb57c")
+	})
+
+}
+func TestMd5(t *testing.T) {
+	Convey("If Md5", t, func() {
+		So(Md5("too"), ShouldEqual, "b403d3f0efbf4cb850d2d543758cb57c")
+	})
 }

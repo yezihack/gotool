@@ -5,7 +5,8 @@ import (
 	"encoding/hex"
 )
 
-// 加密类
+// -----------------加密类--------------------
+// look for test
 
 // str To md5
 func Md5(text string) string {
